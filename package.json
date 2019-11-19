@@ -1,0 +1,10 @@
+{
+  "name": "node-symlink",
+  "version": "1.0.0",
+  "description": "Test node symlink and existSync behaviour in Linux and Windows",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "license": "MIT"
+}
