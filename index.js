@@ -1,8 +1,6 @@
 const fs = require('fs');
 
-console.log(`Before symlink: ${fs.existsSync('linkHere')}`);
-fs.symlinkSync('test/foo.js', 'linkHere');
-console.log(`After symlink: ${fs.existsSync('linkHere')}`);
-console.log(`issymlink: ${fs.lstatSync('linkHere').isSymbolicLink()}`);
-//cleanup
-fs.unlinkSync('linkHere');
+fs.mkdirSync("tmp");
+fs.symlinkSync(".", "tmp/out");
+console.log(`fs.existSync(tmp/out) : ${fs.existsSync('tmp/out')}`);
+fs.rmdirSync('tmp/out');
